@@ -8,13 +8,13 @@ Console.Write("Enter a database port: ");
 string databasePort = Console.ReadLine();
 Console.Write("Enter a database sid/service name: ");
 string databaseSid = Console.ReadLine();
-Console.Write("Enter a database username:");
+Console.Write("Enter a database username: ");
 string databaseUserName = Console.ReadLine();
-Console.Write("Enter a database password:");
+Console.Write("Enter a database password: ");
 string databasePassword = Console.ReadLine();
-Console.Write("Enter a namespace:");
+Console.Write("Enter a namespace: ");
 string nameSpace = Console.ReadLine();
-Console.Write("Enter the path that you want to paste the generated models: (e.g C:\\Users\\Default\\Documents\\Models\\)");
+Console.Write("Enter the path that you want to paste the generated models: (e.g C:\\Users\\Default\\Documents\\Models\\) ");
 string path = Console.ReadLine();
 
 string connectionString =
