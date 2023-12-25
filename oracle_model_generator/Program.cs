@@ -17,6 +17,12 @@ string nameSpace = Console.ReadLine();
 Console.Write("Enter the path that you want to paste the generated models: (e.g C:\\Users\\Default\\Documents\\Models\\) ");
 string path = Console.ReadLine();
 
+if (string.IsNullOrWhiteSpace(path))
+{
+    Console.WriteLine("Path is invalid");
+    return;
+}
+
 string connectionString =
     $"DATA SOURCE={databaseIp}:{databasePort}/{databaseSid};PASSWORD={databasePassword};PERSIST SECURITY INFO=True;USER ID={databaseUserName}";
 
@@ -65,8 +71,8 @@ static string GenerateClassFromTable(OracleConnection connection, string databas
     columnInfoCommand.Parameters.Add("OWNER", OracleDbType.Varchar2).Value = databaseUserName;
     var columnInfoReader = columnInfoCommand.ExecuteReader();
 
-    string classContent = "using System;\nnamespace " + nameSpace + "\n{\n";
-    classContent += "\tpublic class " + className + "\n\t{\n";
+    string classContent = "using System;\nusing System.ComponentModel.DataAnnotations;\nusing System.ComponentModel.DataAnnotations.Schema;\nnamespace " + nameSpace + "\n{\n";
+    classContent += $"\t[Table(\"{tableName}\")]\n\tpublic class " + className + "\n\t{\n";
 
     // Populate the dictionary with column nullability information
     while (columnInfoReader.Read())
@@ -99,7 +105,7 @@ static string GenerateClassFromTable(OracleConnection connection, string databas
             columnType = string.Empty;
         }
         // Generate property
-        classContent += $"\t\tpublic {columnType} {columnName} {{ get; set; }}\n";
+        classContent += $"\t\t[Column(\"{columnName}\")]\n\t\tpublic {columnType} {columnName} {{ get; set; }}\n";
     }
 
 

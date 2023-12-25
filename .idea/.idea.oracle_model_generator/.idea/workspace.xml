@@ -9,6 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34bfff31-e7f9-4510-96d2-14c0c5df0294" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.oracle_model_generator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.oracle_model_generator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oracle_model_generator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/oracle_model_generator/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +80,11 @@
       <workItem from="1700484455618" duration="356000" />
       <workItem from="1700637305720" duration="811000" />
       <workItem from="1700811989628" duration="87000" />
+      <workItem from="1701160357830" duration="1387000" />
+      <workItem from="1701169312810" duration="6000" />
+      <workItem from="1701581333853" duration="3000" />
+      <workItem from="1703262694315" duration="2393000" />
+      <workItem from="1703403528635" duration="762000" />
     </task>
     <servers />
   </component>
